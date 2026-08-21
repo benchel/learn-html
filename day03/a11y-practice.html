@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>온라인 강의 신청</title>
+    <title>HTML 기초 강의 신청</title>
 </head>
 <body>
     <header>
@@ -15,18 +15,124 @@
                 <li><a href="#curriculum">커리큘럼</a></li>
                 <li><a href="#preview">미리보기</a></li>
                 <li><a href="#application">수강 신청</a></li>
+                <li><a href="#classroom">교육장 위치</a></li>
             </ul>
         </nav>
     </header>
 
     <main id="main-content">
-        <section id="introduction"></section>
-        <section id="curriculum"></section>
-        <section id="preview"></section>
-        <section id="application"></section>
+        <section id="introduction">
+            <h2>강의 소개</h2>
+            <figure>
+                <img width="600px" src="./assets/learnning.jpg" alt="사람이 노트북으로 강의를 듣고 있는 모습"/>
+            <figcaption>온라인 수업 예시</figcaption>
+            </figure>
+            <p>인터넷에 접속만 가능하다면 누구나 수강할 수 있습니다.</p>
+        </section>
+        <section id="curriculum">
+            <h2>강의 커리큘럼</h2>
+            <nav aria-label="커리큘럼 순서">
+                <ol>
+                    <li>HTML 문서의 기본 구조</li>
+                    <li>텍스트와 목록 태그</li>
+                    <li>링크와 이미지</li>
+                    <li>입력 양식</li>
+                    <li>미디어와 웹 접근성</li>
+                </ol>
+            </nav>
+        </section>
+        <section id="preview">
+            <h2>강의 미리보기</h2>
+            <video controls width="600" aria-describedby="preview-alt_text">
+                <source src="https://developer.mozilla.org/shared-assets/videos/flower.mp4" type="video/mp4" />
+            </video>
+            <p id="preview-alt_text">꽃봉오리가 피는 영상(5초)</p>
+        </section>
+        <section id="application">
+            <h2>수강 신청</h2>
+            <form action="/" method="POST">
+                <fieldset>
+                    <legend>신청자 정보</legend>
+                    <p>*는 필수항목입니다.</p>
+                    <label for="user-name">*이름</label>
+                    <input type="text" 
+                    name="user-name" 
+                    id="user-name" 
+                    autocomplete="on" 
+                    required/>
+                    <br/>
+                    <label for="user-email">*이메일</label>
+                    <input type="email"
+                     name="user-email" 
+                     id="user-email" 
+                     placeholder="email@domain" 
+                     autocomplete="on" 
+                     required/>
+                    <p aria-describedby="user-email">수강 안내를 받을 이메일 주소를 입력하세요.</p>
+                    <br/>
+                    <label for="user-tel">휴대전화 번호</label>
+                    <input type="tel" 
+                    name="user-tel" 
+                    id="user-tel" 
+                    autocomplete="on"/>
+                    <br/>
+                </fieldset>
+                <fieldset>
+                    <legend>학습 경험</legend>
+                    <p>HTML을 공부한 경험이 있나요?</p>
+
+                    <label for="none">처음 배웁니다.</label>
+                    <input type="radio" id="none" name="study" value="none" required/>
+
+                    <label for="some">조금 배웠습니다.</label>
+                    <input type="radio" id="some" name="study" value="some" required/>
+
+                    <label for="full">프로젝트 경험이 있습니다.</label>
+                    <input type="radio" id="full" name="study" value="full" required/>
+                </fieldset>
+                <fieldset>
+                    <legend>관심 있는 학습 주제</legend>
+                    <p>관심 있는 학습 주제를 골라주세요(여러 항목 선택 가능)</p>
+                    <label for="cb-html">HTML</label>
+                    <input type="checkbox" id="cb-html" name="subject" value="html"/>
+
+                    <label for="cb-a11y">웹 접근성</label>
+                    <input type="checkbox" id="cb-a11y" name="subject" value="a11y"/>
+
+                    <label for="cb-template">입력 양식</label>
+                    <input type="checkbox" id="cb-template" name="subject" value="template"/>
+
+                </fieldset>
+                <div>
+                    <label for="msg">강사에게 남길 말</label><br/>
+                    <textarea name="msg" id="msg" rows="5"></textarea>
+                    <p aria-describedby="msg">수업에서 궁금한 내용이 있다면 작성해주세요.</p>
+                </div>
+                <div>
+                    <label for="agree">개인정보 수집 및 이용에 동의합니다.</label>
+                    <input type="checkbox" id="agree" name="agree" value="true" required/>
+                </div>
+                <input type="submit" value="수강 신청하기"/>
+                <input type="reset" value="다시 작성하기"/>
+            </form>
+        </section>
+        <section id="classroom">
+            <h2>오프라인 교육장 위치</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m5!3m3!1m2!1s0x357ca3e855555555%3A0x9adc6f7812a5019c!2z65287J207JeH6rKM7J6E7KaI7L2U66as7JWE!5e0!3m2!1sko!2skr!4v1787303183251!5m2!1sko!2skr" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>            
+            <address>
+            <a href="mailto:mngr_01@example.com">mngr_01@example.com</a><br />
+            <a href="tel:+023457777">02-345-7777</a>
+            </address>
+        </section>
     </main>
     <footer>
-        
+        <small>&copy;Copyright 2026 범쌤 온라인 클래스</small>
     </footer>
 </body>
 </html>
