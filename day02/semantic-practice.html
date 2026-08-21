@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>블로그</title>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        section{
+            height: 100vh;
+            border: 1px solid black;
+        }
+    </style>    
+</head>
+<body>
+    
+    <header>
+        <h1>블로그 이름</h1>
+
+        <nav>
+            <h2>블로그 메뉴</h2>
+            <ul>
+                <li><a href="#intro">소개</a></li>
+                <li><a href="#board">게시글</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="intro">
+            <h2>소개</h2>
+            <div>
+                <p>블로그 소개 문구</p>
+                <p>잡다한 이야기를 남기는 곳입니다.</p>
+            </div>
+        </section>
+        <section id="board">
+            <h2>게시글</h2>
+            <article>
+                <h3>어제 있었던 일</h3>
+                <div>
+                    <p>작성일자 : <time datetime="2026-08-20">2026년도 08월 20일</time></p>
+                    <p>쿠팡에서 중고 모니터를 주문했다.</p>
+                    <p>상품평에 복불복이 심하다는데 걱정된다. 부디 반품하는 일이 없기를 바란다.</p>
+                    <p>또 중고 상품이다보니 모니터의 패널 수명이 강의 기간보다 짧지 않을까 걱정이다. </p>
+                </div>
+            </article>
+            <aside>
+                <h3>주문한 상품 링크</h3>
+                <a href="https://www.coupang.com/" target="_blank">광고 아닙니다.</a>
+            </aside>            
+            <article>
+                <h3>오늘의 날씨</h3>
+                <div>
+                    <p>작성일자 : <time datetime="2026-08-20">2026년도 08월 20일</time></p>
+                    <p>점심에 비가 내렸다.</p>
+                    <p> 지금은 그쳤고, 비가 내릴듯 말듯하다</p>
+                </div>                
+            </article>
+        </section>
+        <footer>
+            <p>블로그 주인 : 조민지</p>
+        </footer>
+    </main>
+
+</body>
+</html>

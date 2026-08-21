@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>스터디 신청 페이지</title>
+</head>
+<body>
+    <header>
+        <h1>간단한 스터디 신청 페이지</h1>
+        <section aria-label="스터디 소개">
+            <img src="./assets/book.jpg" alt="책상에 여러 권의 책이 올려져 있는 모습"/>
+            <p>기초 위주로 공부합니다. 부담 갖지말고 바로 신청해주세요.</p>
+        </section>
+    </header>
+    <main>
+        <section>
+            <h2>신청서 양식</h2>
+            <form action="/" method="GET">
+                <p>*는 필수항목입니다.</p>
+                <label for="user-name">*이름</label>
+                <input type="text" name="user-name" id="user-name" value=""/>
+                <label for="user-email">*이메일</label>
+                <input type="email" name="user-email" id="user-email" value="" placeholder="email@domain"/>
+                <fieldset>
+                    <legend>귀하는 HTML 학습 경험이 있습니까?</legend>                
+                        <label for="none">처음 배웁니다.</label>
+                        <input type="radio" name="study" id="none"/>
+                        <label for="some">배운 경험이 있습니다.</label>
+                        <input type="radio" name="study" id="some"/>
+                    </fieldset>
+                <hr/>
+                <label for="check">*개인정보 수집에 동의합니다.</label>
+                <input type="checkbox" name="check" id="check" required/>
+                <hr/>
+                <input type="submit" value="제출하기"/>
+            </form>            
+        </section>
+    </main>
+    <footer>
+        <p>스터디 관련 문의는 아래의 전화번호 혹은 이메일로 부탁드립니다.</p>
+        <p>010-0000-0000</p>
+        <p>email@dmain</p>
+    </footer>
+</body>
+</html>

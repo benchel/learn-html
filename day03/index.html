@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+    <style>
+        textarea{
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+    
+    <label for="user-name">이름 :</label>
+    <input type="text" id="user-name"/>
+
+    <hr/>
+
+    <label for="male">남성 :</label>
+    <input type="radio" name="gender-select" id="male"/>
+
+    <label for="female">여성 :</label>
+    <input type="radio" name="gender-select" id="female"/>
+
+    <hr/>
+
+    <label for="checkbox">동의합니다</label>
+    <input type="checkbox" name="" id="checkbox"/>
+
+    <hr/>
+
+     <label for="nickname">
+        이름 :
+        <input type="text" name="nickname"/>
+     </label>
+
+     <hr/>
+
+     <label for="city">남양주</label>
+     <input type="text" id="city" name="city" value="별내"/>
+
+     <hr/>
+
+     <div>
+        <label for="checkbox2">동의합니다</label>
+        <input type="checkbox" name="" id="checkbox2" checked/>
+     </div>
+
+     <hr/>
+
+     <label for="email">이메일</label>
+     <input 
+        type="email" 
+        name="email" 
+        id="email" 
+        placeholder="userid@email@domain"
+        required
+        disabled
+     />
+
+     <button type="button">회원 가입</button>
+
+     <input type="tel" placeholder="010-1234-5678"/>
+     <input type="search" placeholder="검색어를 입력하세요."/>
+
+     <hr/>
+
+     <input type="number" id="age" name="age" min="1" max="100" step="5"/>
+
+     <input type="range" id="volume" name="volume" min="1" max="100" step="20"/>
+
+     <input type="date" name="birthDate"/>
+     <input type="time" name="meetingTime"/>
+     <input type="datetime-local" name="reservation"/>
+     <input type="month" name="startMonth"/>
+     <input type="week" name="week"/>
+
+     <hr/>
+
+     <input type="color" name="theme-color" id="theme-color" value="#000000"/>
+
+     <!-- <input type="file" accept=""/> -->
+
+     <input type="submit" value="가입하기"/>
+     <input type="reset" value="초기화"/>
+     <input type="button" value="로그인"/>
+
+     <hr/>
+
+     <label for="introduction">자기소개</label>
+     <textarea 
+        id="introduction"
+        name="introduction"
+        rows="5"
+        cols="40"
+        placeholder="">초기값입니다.</textarea>
+
+    <hr/>
+    
+    <select name="city2" id="city2">
+        <optgroup label="광역시">
+            <option value="seoul">서울</option>
+            <option value="seoul">부산</option>
+            <option value="seoul">대전</option>
+            <option value="seoul">광주</option>            
+        </optgroup>
+        <optgroup label="그 외">
+            <option value="seoul">정읍</option>
+            <option value="seoul">청주</option>
+            <option value="seoul">나주</option>
+            <option value="seoul">남양</option>            
+        </optgroup>
+    </select>
+
+    <hr/>
+
+    <fieldset>
+        <legend>수강 수준</legend>
+        <label>
+            <input type="radio" name="level" value="beginner"/>
+        </label>
+    </fieldset>
+
+    <hr/>
+
+    <form action="/login">
+        <label for="user-name2">이름 : </label>
+        <input type="text" id="user-name2" name="user-name2"/>
+        
+        <label for="password2">비밀번호 : </label>
+        <input type="password" id="password2" name="password2" />
+        <button type="submit">가입하기</button>
+    </form>
+
+</body>
+</html>
